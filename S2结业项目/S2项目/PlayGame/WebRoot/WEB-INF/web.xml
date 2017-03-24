@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+  <filter-name>EncodeFilter</filter-name>
+  <filter-class>np.demo.web.EncodeFilter</filter-class>
+  <init-param>
+  <param-name>encode</param-name>
+  <param-value>UTF-8</param-value>
+  </init-param>
+  </filter>
+  <filter-mapping>
+  <filter-name>EncodeFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>adminSQLserverServlet</servlet-name>
+    <servlet-class>np.servlet.adminSQLserverServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>saleSQLservlet</servlet-name>
+    <servlet-class>np.servlet.saleSQLservlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>shoppingServel</servlet-name>
+    <servlet-class>np.servlet.shoppingServel</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>yellowServlet</servlet-name>
+    <servlet-class>np.servlet.yellowServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AjaxServlet</servlet-name>
+    <servlet-class>np.servlet.AjaxServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ADServlet</servlet-name>
+    <servlet-class>np.servlet.ADServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>adminSQLserverServlet</servlet-name>
+    <url-pattern>/adminSQLserverServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>saleSQLservlet</servlet-name>
+    <url-pattern>/saleSQLservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>shoppingServel</servlet-name>
+    <url-pattern>/shoppingServel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yellowServlet</servlet-name>
+    <url-pattern>/yellowServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>AjaxServlet</servlet-name>
+    <url-pattern>/AjaxServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ADServlet</servlet-name>
+    <url-pattern>/ADServlet</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
